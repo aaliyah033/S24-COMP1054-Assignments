@@ -1,0 +1,29 @@
+/** Step one **/
+
+/** Step two **/
+h1,h2,h3 {
+    font-family: "Briem Hand", sans-serif;
+}
+/** Step three **/
+h1{
+    font-size: 46px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color:rgb(219, 30, 30);
+}
+
+/** Step four **/
+p, a, li{
+    font-family: 'Sedan SC', sans-serif;
+}
+
+/** Step five **/
+p span{
+    color: rgb(218, 64, 64);
+}
+
+/** Step six **/
+h3{
+    font-size: 25px;
+    text-shadow: 3px 2px 3px rgba(0,0,0,.3);
+}
