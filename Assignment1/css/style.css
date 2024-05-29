@@ -156,7 +156,7 @@ iframe {
     line-height: 1.2;
     color: #B7990D;
 }
-/* for the lines of lyrics */
+/* for the lines of lyrics provides white space and line breaks */
 .lyrics{
     white-space: pre-wrap;
 } 
