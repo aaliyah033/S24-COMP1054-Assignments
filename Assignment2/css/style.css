@@ -1,0 +1,423 @@
+/* 
+fonts
+    Rubik Bubbles 
+    Concert One 
+color
+    #FFBD00 - orange(gold)
+    #F8122C - red
+    #FFD60A - yello(gold)
+    #FF0A5C - pnk
+
+    #002766 - royalblue
+    #76AB21 - applegreen
+    
+*/
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color:  #FFD60A;;
+    margin: 0;
+ 
+}
+h1,h2,h3,h4{
+    font-family: "Rubik Bubbles", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+p{
+    font-family: "Concert One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+  /** Header section **/
+
+  header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    background-color:#f00924;
+    z-index: 999;
+    transition: all .25s linear;
+  }
+  header div{
+    width: auto;
+    height: 100%;
+    flex-grow: 1;
+  }
+  header div img{
+    width: auto;
+    height: 100%;
+  }
+  header nav menu{
+    display: flex;
+    list-style: none;
+    
+  }
+  header nav menu li{
+    padding: 0 30px;
+  }
+  header nav menu li a{
+    color: #FFBD00;
+    position: relative;
+    text-decoration: none;
+    font-size: 2.5rem;
+  }
+  
+  /** Header Scroll section **/
+
+  .scrolledHeader{
+    height: 75px;
+    background-color: #FFD60A;
+  }
+  .scrolledHeader a{
+    color: #F1FAEE;
+  }
+  
+  /** Menu List  section for Hover **/
+
+  header nav menu li a::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+  
+  header nav menu li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  
+  header nav menu li a::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    inset: 0 0 0 0;
+    background: #002766;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+  
+  /** when Scrolled header section list hover **/
+  .scrolledHeader a::before {
+    background: #002766;
+  }
+
+  
+/* Header Masthead section*/
+
+.header-masthead {
+    height: 100vh;
+    background-image: url("../img/background3.PNG");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-masthead div {
+    background-color: rgba(1, 1, 1, 0.6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-masthead div h1 {
+    font-size: 5em;
+    color: #FF0A5C;
+    text-shadow: 10px 8px 5px rgb(47, 45, 45);
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+
+
+/* ater masthead, Photo and Text Section */
+
+.photo-text {
+    display: flex;
+    height: 100vh; 
+    background-color: #FFD60A;
+   
+}
+
+.photo-text .photo,
+.photo-text .text {
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-text .photo img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; 
+    transform: scale(1);
+    transition: .2s ease-in-out;
+}
+.photo-text .photo:hover img {
+    transform: scale(1.3);
+    }
+
+.photo-text .text {
+    background-color: #FFD60A; 
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    transform: scale(1);
+    transition: .2s ease-in-out;
+}
+.photo-text .text:hover {
+    transform: scale(1.1);
+    }
+
+.photo-text .text h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #003F88;
+}
+
+.photo-text .text p {
+    font-size: 1.8em;
+    line-height: 1.5;
+    margin: 10px;
+    color:  #FF0A5C;
+}
+
+
+/* Middle section showing flavors */
+
+.haribo-types > div {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.haribo-types {
+    margin-bottom: 10px; 
+    padding-bottom: 50px;
+    background-color: #FFD60A;
+}
+.haribo-types > section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+.haribo-types > section div {
+    min-height: 400px; 
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.haribo-types > section div:nth-child(1) {
+    background-image: url("../img/pkt1.PNG");
+    background-size: cover;
+    background-position: center;
+}
+.haribo-types > section div:nth-child(2) {
+    background-image: url("../img/pkt3.PNG");
+    background-size: cover;
+    background-position: center;
+}
+.haribo-types > section div:nth-child(3) {
+    background-image: url("../img/pkt2.PNG");
+    background-size: cover;
+    background-position: center;
+}
+.haribo-types > section div .mask {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(246, 7, 7, 0.803);
+    border-radius: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    transition: all .35s linear;
+}
+.haribo-types > section div .mask:hover {
+    opacity: 1.2;
+}
+.horibo-buton {
+    border: solid 5px #76AB21;
+    padding: 15px 50px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #FFD60A;
+    background-color: #003F88;
+    font-weight: 900;
+    transition: all .25s linear;
+}
+
+
+/* About section */
+
+.about-design {
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../img/background5.PNG");
+    background-size: cover;
+    background-position: center;
+    border: 40px solid #FFD60A; 
+    padding: 50px; 
+   
+   
+}
+
+.about-design > div {
+    background-color: rgba(226, 20, 20, 0.801); 
+    padding: 20px;
+    border: 24px solid #F8122C;
+    box-shadow: 0 0 30px rgba(231, 5, 5, 0.906); 
+}
+
+.about-design h3 {
+    margin-bottom: 20px;
+    font-size: 4em; 
+    color: #FFBD00;
+}
+
+.svg-about {
+    display: inline-block;
+    color: #FFBD00;
+    text-decoration: none;
+    padding: 20px 30px;
+    border: 7px solid  #FFBD00; 
+    background-color: #F8122C; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
+    color: #FFBD00; 
+    font-size: 2em;
+}
+
+.svg-about:hover {
+    background-color: #FFD60A; 
+    color: #F8122C; 
+}
+
+
+/* Video Section */
+
+.video-section {
+    padding: 60px 0;
+    background-color:  #002766 ; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    width: 90%;
+}
+
+.video-container .video {
+    position: relative;
+    padding-bottom: 55%;
+   
+}
+
+.video-container .video video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+/* <!-- pictures section --> */
+
+#pictures {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.rotate-zoom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.rotate-zoom img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s;
+}
+
+.rotate-zoom img:hover {
+    transform: scale(1.3) rotate(20deg);
+}
+
+/* footer */
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 10px;
+    background-color:  #002766; 
+    align-items: center; 
+}
+
+/* Logo */
+footer .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .logo img {
+    height: 200px; 
+    width: auto;
+}
+
+/* Contact Form */
+
+footer .contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px; 
+}
+
+footer .contact-form input,
+footer .contact-form button {
+    margin: 10px;
+    padding: 10px; 
+    border-radius: 5px;
+    border: 5px solid #f4f405;
+    font-size: 1em; 
+}
+
+footer .contact-form button {
+    background-color: #FFD60A;
+    color: #F8122C;
+    font-weight: bold;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+
+
